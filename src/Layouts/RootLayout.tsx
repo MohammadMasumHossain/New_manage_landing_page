@@ -8,15 +8,15 @@ import Navbar from "../Components/Navbar";
 const RootLayout = () => {
   return (
     <div>
-      <div className=" px-26">
-        <Navbar></Navbar>
-        {/* <Hero></Hero>
-        <MainContent></MainContent> */}
+      <div className=" px-10 md:px-26">
+        {/* <Navbar></Navbar> */}
+        <Hero></Hero>
+        <MainContent></MainContent>
       </div>
 
-      {/* <Branding></Branding>
+      <Branding></Branding>
 
-      <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 };
