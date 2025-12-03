@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from "../assets/logo.svg"
+
+import Logowhite from './Logowhite';
 import facebook from "../assets/icon-facebook.svg"
 import youtube from "../assets/icon-youtube.svg"
 import twitter from "../assets/icon-twitter.svg"
@@ -7,13 +7,13 @@ import pinterest from "../assets/icon-pinterest.svg"
 import instagram from "../assets/icon-instagram.svg"        
 
 
-const Footer = ({}) => {
+const Footer = () => {
     return (
         <div className='bg-black flex justify-between px-26 w-full h-40'>
             {/* first div */}
             <div>
                  <div className="pt-10  text-gray-700">
-                    <img className="text-gray-700" src={logo} alt="logo" />
+                  <Logowhite />
                  </div>
 
                  <div className='flex mt-8 gap-4'>
@@ -47,10 +47,27 @@ const Footer = ({}) => {
             </div>
 
             {/* fourth div */}
-            <div>
-                <input className='text' type="text" />
-            </div>
+            <div className="mt-10 flex flex-col items-start">
+        <div className="flex gap-3">
+           <input 
+            type="text"
+            placeholder="Updates in your inbox…"
+            className="px-4 py-2 bg-white rounded-full text-black outline-none h-10 w-60"
+           />
+
+          <button className="bg-orange-500 text-white px-5 py-2 rounded-full h-10 hover:bg-red-600">
+            Go
+          </button>
         </div>
+
+             <p className="text-white text-sm mt-3 opacity-70">
+              Copyright 2020. All Rights Reserved.
+             </p>
+            
+
+            </div>
+
+           </div>
     );
 };
 

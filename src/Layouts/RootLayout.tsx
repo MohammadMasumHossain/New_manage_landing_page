@@ -1,30 +1,24 @@
+import Branding from "../Components/Branding";
+import Footer from "../Components/Footer";
+import Hero from "../Components/Hero";
+import MainContent from "../Components/MainContent";
 
-
-import Branding from '../Components/Branding';
-import Footer from '../Components/Footer';
-import Hero from '../Components/Hero';
-import MainContent from '../Components/MainContent';
-
-import Navbar from '../Components/Navbar';
+import Navbar from "../Components/Navbar";
 
 const RootLayout = () => {
-    return (
-        <div >
-            <div className=' px-26'>
-            <Navbar></Navbar>
-            <Hero></Hero>
-            <MainContent></MainContent>
-            </div>
-            
-           <Branding></Branding>
+  return (
+    <div>
+      <div className=" px-26">
+        <Navbar></Navbar>
+        {/* <Hero></Hero>
+        <MainContent></MainContent> */}
+      </div>
 
-          
-            <Footer></Footer>
-         
-            
-            
-        </div>
-    );
+      {/* <Branding></Branding>
+
+      <Footer></Footer> */}
+    </div>
+  );
 };
 
 export default RootLayout;
