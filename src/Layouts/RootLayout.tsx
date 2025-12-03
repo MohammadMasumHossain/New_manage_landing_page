@@ -4,6 +4,7 @@ import Hero from "../Components/Hero";
 import MainContent from "../Components/MainContent";
 
 import Navbar from "../Components/Navbar";
+import Testimonial from "../Components/Testimonial";
 
 const RootLayout = () => {
   return (
@@ -15,6 +16,7 @@ const RootLayout = () => {
       </div>
 
       <Branding></Branding>
+      <Testimonial></Testimonial>
 
       <Footer></Footer>
     </div>
