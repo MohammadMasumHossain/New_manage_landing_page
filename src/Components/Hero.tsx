@@ -1,5 +1,6 @@
 import HeroImage from "../assets/illustration-intro.svg";
 
+
 const Hero = () => {
   return (
     <div className="flex flex-col-reverse lg:flex-row md:justify-between">
