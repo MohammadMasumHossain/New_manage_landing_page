@@ -73,7 +73,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div>
+    <section>
       <div className="mt-20">
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
           What They've Said
@@ -116,7 +116,7 @@ const Testimonial = () => {
           Get Started
         </motion.button>
       </div>
-    </div>
+    </section>
   );
 };
 

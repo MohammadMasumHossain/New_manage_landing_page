@@ -13,13 +13,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex relative justify-between gap-8 items-center py-6 px-4 md:px-12">
+      <nav className="flex   relative justify-between gap-8 items-center py-6 px-4 md:px-12">
         <div>
           <img className="w-40 h-auto" src={logo} alt="logo" />
         </div>
 
         <ul className="hidden md:flex gap-6 text-gray-700 font-semibold">
-          <li>Pricing</li>
+          <li className="relative after:absolute ">Pricing</li>
           <li>Product</li>
           <li>About us</li>
           <li>Careers</li>
@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Hamburger */}
-        <div>
+        <div className="md:hidden">
           {!nav ? (
             <img
               className="md:hidden w-8 "
