@@ -1,3 +1,5 @@
+import Button from "./ui/Button";
+
 const Branding = () => {
   return (
     <div className="bg-orange-500 flex-col md:flex-row mt-10 md:mt-26 px-26 max-w-full justify-between flex items-center  h-50 md:h-30">
@@ -7,9 +9,7 @@ const Branding = () => {
         </p>
       </div>
       <div>
-        <button className="  bg-white hover:bg-orange-400 text-orange-700 font-bold  md:text-bold w-30 h-10 md:w-40 md:h-12 mb-6 rounded-l-full rounded-r-full">
-          Get started
-        </button>
+        <Button/>
       </div>
     </div>
   );

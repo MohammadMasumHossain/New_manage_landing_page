@@ -9,8 +9,8 @@ import Testimonial from "../components/Testimonial";
 
 const RootLayout = () => {
   return (
-    <section>
-      <div className="  px-10 md:px-26 ">
+    <section className="max-w-7xl mx-auto vietnamsans">
+      <div className="  px-10 ">
         <div className="relative">
           <div className="bg-[url('/bg-tablet-pattern.svg')] -mt-90 md:-mt-60    md:ml-54 z-[-1] md:h-[856px] md:w-[1220px]  h-[850px] w-[830px] absolute bg-no-repeat bg-top-right"></div>
           <Navbar />

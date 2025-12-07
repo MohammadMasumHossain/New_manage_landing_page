@@ -22,11 +22,11 @@ const Navbar = () => {
 
         <ul className="hidden md:flex gap-6 text-gray-700 font-semibold">
           
-          <NavLink to="#" className="text-primary-blue">Pricing</NavLink>
-          <NavLink to="#" className="text-primary-blue">Product</NavLink>
-          <NavLink to="#" className="text-primary-blue">About us</NavLink>
-          <NavLink to="#" className="text-primary-blue">Careers</NavLink>
-          <NavLink to="#" className="text-primary-blue">Community</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">Pricing</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">Product</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">About us</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">Careers</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">Community</NavLink>
           
         </ul>
 
@@ -62,11 +62,11 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col gap-4  px-20 py-20 -mt-78 bg-gray-100  text-gray-700">
-          <NavLink to="#" className="text-primary-blue">Pricing</NavLink>
-          <NavLink to="#" className="text-primary-blue">Product</NavLink>
-          <NavLink to="#" className="text-primary-blue">About us</NavLink>
-          <NavLink to="#" className="text-primary-blue">Careers</NavLink>
-          <NavLink to ="#" className="text-primary-blue">Community</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">Pricing</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">Product</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">About us</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">Careers</NavLink>
+          <NavLink to ="#" className="text-primary-blue hover:opacity-50">Community</NavLink>
         </ul>
       </nav>
     </>

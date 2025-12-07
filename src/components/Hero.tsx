@@ -3,22 +3,23 @@ import Button from "./ui/Button";
 
 const Hero = () => {
   return (
-    <header className="flex flex-col-reverse lg:flex-row md:justify-between">
+    <header className="flex flex-col-reverse text-primary-blue lg:flex-row md:justify-between">
       <div className=" mt-12  md:mt-40 md:w-1/2">
-        <div className=" font-extrabold whitespace-pre-line  text-gray-700 text-4xl md:text-5xl">
-          <h1 className="whitespace-pre-line">
-            <span className="ml-4">Bring everyone</span> <br /> together to
-            build <br></br>better products.
+        <div className=" font-extrabold whitespace-pre-line   text-4xl md:text-5xl">
+          <h1 className="whitespace-pre-line text-center md:text-start ">
+            Bring everyone
+            <br /> together to build <br />
+            better products.
           </h1>
         </div>
-        <div className="mt-6 md:mt-10 whitespace-pre-line font-light text-lg md:text-2xl text-gray-500 ">
-          <p className="whitespace-pre-line w-full md:w-10/12">
+        <div className="mt-6 md:mt-10 whitespace-pre-line font-light text-lg md:text-2xl opacity-70">
+          <p className="whitespace-pre-line text-center md:text-start w-full md:w-10/12">
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>
         </div>
-        <div className=" mt-6 flex justify-center items-center lg:mt-10 ">
-          <Button/>
+        <div className=" mt-6 flex md:justify-start justify-center lg:mt-10 ">
+          <Button />
         </div>
       </div>
 
