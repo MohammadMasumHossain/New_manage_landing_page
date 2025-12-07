@@ -1,4 +1,5 @@
 import HeroImage from "../assets/illustration-intro.svg";
+import Button from "./ui/Button";
 
 const Hero = () => {
   return (
@@ -17,9 +18,7 @@ const Hero = () => {
           </p>
         </div>
         <div className=" mt-6 flex justify-center items-center lg:mt-10 ">
-          <button className=" bg-orange-500 hover:bg-orange-400 text-white font-semibold w-40 h-12 px-8 py-2 rounded-l-full rounded-r-full">
-            Get Started
-          </button>
+          <Button/>
         </div>
       </div>
 

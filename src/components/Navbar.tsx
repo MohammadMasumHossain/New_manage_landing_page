@@ -3,6 +3,7 @@ import { useState } from "react";
 import logo from "../assets/logo.svg";
 import hamburger from "../assets/icon-hamburger.svg";
 import close from "../assets/icon-close.svg";
+import  Button from "./ui/Button";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -28,9 +29,7 @@ const Navbar = () => {
 
         {/* Desktop Button */}
         <div className="hidden md:block">
-          <button className="bg-orange-500 hover:bg-orange-400 text-white font-semibold w-40 h-12 rounded-full">
-            Get Started
-          </button>
+          <Button />
         </div>
 
         {/* Mobile Hamburger */}

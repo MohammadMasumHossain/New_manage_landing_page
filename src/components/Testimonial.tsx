@@ -5,7 +5,8 @@ import shanaiimg from "../assets/avatar-shanai.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { motion } from "motion/react";
+
+import Button from "./ui/Button";
 
 const Testimonial = () => {
   const data = [
@@ -107,14 +108,7 @@ const Testimonial = () => {
         </div>
       </div>
       <div className="text-center mt-12 mb-12">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          onHoverStart={() => console.log("hover started!")}
-          className="px-6 py-3 bg-[#f25f3a] text-white rounded-full font-semibold hover:bg-[#d94f2f] transition-colors"
-        >
-          Get Started
-        </motion.button>
+        <Button></Button>
       </div>
     </section>
   );

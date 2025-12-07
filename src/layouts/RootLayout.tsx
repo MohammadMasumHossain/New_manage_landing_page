@@ -1,10 +1,10 @@
-import Branding from "../Components/Branding";
-import Footer from "../Components/Footer";
-import Hero from "../Components/Hero";
-import MainContent from "../Components/MainContent";
+import Branding from "../components/Branding";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import MainContent from "../components/MainContent";
 
-import Navbar from "../Components/Navbar";
-import Testimonial from "../Components/Testimonial";
+import Navbar from "../components/Navbar";
+import Testimonial from "../components/Testimonial";
 
 const RootLayout = () => {
   return (
