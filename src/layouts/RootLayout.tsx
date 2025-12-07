@@ -1,3 +1,4 @@
+import { Outlet } from "react-router";
 import Branding from "../components/Branding";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
@@ -25,6 +26,7 @@ const RootLayout = () => {
       </div>
 
       <Branding></Branding>
+      <Outlet></Outlet>
 
       <Footer></Footer>
     </section>

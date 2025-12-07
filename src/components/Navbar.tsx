@@ -4,6 +4,7 @@ import logo from "../assets/logo.svg";
 import hamburger from "../assets/icon-hamburger.svg";
 import close from "../assets/icon-close.svg";
 import  Button from "./ui/Button";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -14,17 +15,19 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex   relative justify-between gap-8 items-center py-6 px-4 md:px-12">
+      <nav className="flex relative justify-between gap-8 items-center py-6 px-4 md:px-12">
         <div>
           <img className="w-40 h-auto" src={logo} alt="logo" />
         </div>
 
         <ul className="hidden md:flex gap-6 text-gray-700 font-semibold">
-          <li className="relative after:absolute ">Pricing</li>
-          <li>Product</li>
-          <li>About us</li>
-          <li>Careers</li>
-          <li>Community</li>
+          
+          <NavLink to="#" className="text-primary-blue">Pricing</NavLink>
+          <NavLink to="#" className="text-primary-blue">Product</NavLink>
+          <NavLink to="#" className="text-primary-blue">About us</NavLink>
+          <NavLink to="#" className="text-primary-blue">Careers</NavLink>
+          <NavLink to="#" className="text-primary-blue">Community</NavLink>
+          
         </ul>
 
         {/* Desktop Button */}
@@ -59,11 +62,11 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col gap-4  px-20 py-20 -mt-78 bg-gray-100  text-gray-700">
-          <li>Pricing</li>
-          <li>Product</li>
-          <li>About us</li>
-          <li>Careers</li>
-          <li>Community</li>
+          <NavLink to="#" className="text-primary-blue">Pricing</NavLink>
+          <NavLink to="#" className="text-primary-blue">Product</NavLink>
+          <NavLink to="#" className="text-primary-blue">About us</NavLink>
+          <NavLink to="#" className="text-primary-blue">Careers</NavLink>
+          <NavLink to ="#" className="text-primary-blue">Community</NavLink>
         </ul>
       </nav>
     </>
