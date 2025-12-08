@@ -1,9 +1,9 @@
 const MainContent = () => {
   return (
-    <section className="flex flex-col text-primary-blue md:flex-row justify-between gap-">
+    <section className="flex flex-col md:flex-row max-w-[1500px] w-[95%] md:w-[90%] lg:w-[80%] mx-auto  text-primary-blue  lg:justify-between ">
       <div className=" mt-20 md:mt-40 md:w-6/12">
         <div className="font-bold lg:font-black text-4xl lg:text-4xl">
-          <h3 className="w-full text-center lg:text-start ">
+          <h3 className="w-full  text-center lg:text-start ">
             What's different about Manage?
           </h3>
         </div>
@@ -17,20 +17,14 @@ const MainContent = () => {
       </div>
 
       <div className=" mt-10 md:w-6/12 md:ml-30 md:mt-40 ">
-        <div className="">
-          <div className="flex bg-base-orange md:bg-white  rounded-l-full  justify-center items-center gap-6">
-            <div className="bg-primary-orange md:bg-none flex md:-ml-12 text-white font-semibold md:font-bold w-16 h-12 px-5  py-3 rounded-l-full rounded-r-full">
-              01
-            </div>
-            <div>
-              <h3 className="font-bold  text-sm md:text-xl md:py-2 px-2    md:font-bold">
-                Track company-wide progress
-              </h3>
-            </div>
+        <div className="flex gap-6">
+          <div className="bg-primary-orange  text-white font-semibold md:font-bold w-16 h-12 px-5 py-3 rounded-l-full rounded-r-full">
+            01
           </div>
-
-          <div></div>
           <div>
+            <h3 className="font-bold md:text-3xl  md:font-bold">
+              Track company-wide progress
+            </h3>
             <p className="md:text-xl md:font-normal opacity-70 mt-6 w-full  md:w-10/12">
               See how your day-to-day tasks fit into the wider vision. Go from
               tracking progress at the milestone level all the way done to the
@@ -76,3 +70,4 @@ const MainContent = () => {
 };
 
 export default MainContent;
+

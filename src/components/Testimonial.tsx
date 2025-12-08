@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Button from "./ui/Button";
+import { useState } from "react";
 
 const Testimonial = () => {
   const data = [
@@ -39,13 +40,33 @@ const Testimonial = () => {
       image: shanaiimg,
     },
   ];
+
+  const[activeSlide, setActiveSlide] =useState(0);
+ 
+   
   var settings = {
     dots: true,
-    infinite: false,
+    
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
+    
+    beforeChange: (current, next) => {
+      
+      setActiveSlide(next);
+    },
+   
+
+      customPaging: (i:number) => (
+      <div className= {`size-2  rounded-full mt-6 border border-red-500 ${i === activeSlide ? "bg-primary-orange":"bg-white"}`}
+        
+      >
+        
+      </div>
+    ),
+
     responsive: [
       {
         breakpoint: 1024,
@@ -72,10 +93,12 @@ const Testimonial = () => {
         },
       },
     ],
+
+
   };
   return (
-    <section>
-      <div className="mt-20">
+    <section className="max-w-[1500px] w-[80%] mx-auto">
+      <div className="mt-20 ">
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
           What They've Said
         </h2>
@@ -107,8 +130,8 @@ const Testimonial = () => {
           </Slider>
         </div>
       </div>
-      <div className="text-center  mt-12 mb-12">
-        <Button></Button>
+      <div className="text-center text-white mt-12 mb-12">
+        <Button bgcolor="bg-primary-orange"></Button>
       </div>
     </section>
   );

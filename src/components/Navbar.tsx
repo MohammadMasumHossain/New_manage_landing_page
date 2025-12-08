@@ -30,9 +30,9 @@ const Navbar = () => {
     <>
       <div className= {`${isScrolled? "bg-white shadow-navbar " : "bg-transparent"} sticky top-0 z-50`}  >
         
-        <div className="flex   max-w-7xl mx-auto  justify-between gap-8 items-center py-6 px-4 md:px-12">
+        <div className="flex   max-w-[1500px] w-[80%] mx-auto  justify-between gap-8 items-center py-6 px-4 md:px-8">
         <div>
-          <img className="w-40 h-auto" src={logo} alt="logo" />
+          <img className="  min-w-32  lg:w-40 h-auto"  src={logo} alt="logo" />
         </div>
 
         <ul className="hidden md:flex gap-6 text-gray-700 font-semibold">
@@ -46,8 +46,8 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Button */}
-        <div className="hidden md:block">
-          <Button />
+        <div className="hidden text-white md:block">
+          <Button bgcolor="bg-primary-orange"/>
         </div>
 
         {/* Mobile Hamburger */}
@@ -61,7 +61,7 @@ const Navbar = () => {
             />
           ) : (
             <img
-              className="md:hidden w-8 fixed top-6 right-6 "
+              className="md:hidden w-8 fixed top-6 right-22 "
               onClick={showNav}
               src={close}
               alt="close"
@@ -77,7 +77,7 @@ const Navbar = () => {
           nav ? "translate-x-0" : "translate-x-full hidden"
         }`}
       >
-        <ul className="flex flex-col gap-4  px-20 py-20 -mt-78 bg-gray-100  text-gray-700">
+        <ul className="flex flex-col gap-4  px-20 py-20  bg-gray-100  text-gray-700">
           <NavLink to="#" className="text-primary-blue hover:opacity-50">Pricing</NavLink>
           <NavLink to="#" className="text-primary-blue hover:opacity-50">Product</NavLink>
           <NavLink to="#" className="text-primary-blue hover:opacity-50">About us</NavLink>

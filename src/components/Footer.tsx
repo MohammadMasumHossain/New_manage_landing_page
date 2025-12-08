@@ -15,14 +15,14 @@ import Instragram from "./shared/icons/Instragram";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black flex flex-col-reverse  md:flex-row items-center justify-between px-26 w-full pb-10 md:h-50">
+      <footer className="bg-black flex flex-col-reverse  md:flex-row items-center md:justify-around lg:justify-between lg:px-26 w-full pb-10 md:h-50">
         {/* first div */}
         <div className="flex flex-col-reverse  md:items-start items-center md:flex-col ">
           <div className="pt-10  text-gray-700">
             <Logowhite />
           </div>
 
-          <div className="flex mt-8 gap-4 space-x-4 ">
+          <div className="flex mt-8 lg:gap-4 space-x-4 ">
             <NavLink to="#"  ><Facebook  /></NavLink>
             <NavLink to="#"><Youtube /></NavLink>
             <NavLink to="#" > <Twitter/></NavLink>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         {/* second div */}
-        <div className="flex gap-20  md:gap-40 mt-4 md:mt-8">
+        <div className="flex gap-20 md:gap-10  lg:gap-40 mt-4 md:mt-8">
           <div className="text-white pt-10   text-semibold ">
             <ul className="space-y-4 flex flex-col">
               <NavLink to="#" className="hover:text-primary-orange ">Home</NavLink>
