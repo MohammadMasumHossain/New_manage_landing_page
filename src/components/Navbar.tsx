@@ -1,5 +1,5 @@
 //
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 import hamburger from "../assets/icon-hamburger.svg";
 import close from "../assets/icon-close.svg";
@@ -8,14 +8,29 @@ import { NavLink } from "react-router";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const showNav = () => {
     setNav(!nav);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []); 
   return (
     <>
-      <nav className="flex relative justify-between gap-8 items-center py-6 px-4 md:px-12">
+      <div className= {`${isScrolled? "bg-white shadow-navbar " : "bg-transparent"} sticky top-0 z-50`}  >
+        
+        <div className="flex   max-w-7xl mx-auto  justify-between gap-8 items-center py-6 px-4 md:px-12">
         <div>
           <img className="w-40 h-auto" src={logo} alt="logo" />
         </div>
@@ -53,7 +68,8 @@ const Navbar = () => {
             />
           )}
         </div>
-      </nav>
+      </div>
+      </div>
 
       {/* mobile menu */}
       <nav

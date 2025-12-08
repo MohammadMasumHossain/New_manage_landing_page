@@ -85,7 +85,7 @@ const Testimonial = () => {
           <Slider {...settings}>
             {data.map((d) => (
               <div className="pt-10 ">
-                <div className="bg-red-50 h-60   text-gray-500 roundex-xl">
+                <div className="bg-base-light-gray h-60    text-gray-500 roundex-xl">
                   <div className="h-16 rounded-t-xl  relative flex justify-center items-center">
                     <img
                       src={d.image}
@@ -107,7 +107,7 @@ const Testimonial = () => {
           </Slider>
         </div>
       </div>
-      <div className="text-center mt-12 mb-12">
+      <div className="text-center  mt-12 mb-12">
         <Button></Button>
       </div>
     </section>

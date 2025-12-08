@@ -4,6 +4,7 @@ import Button from "./ui/Button";
 const Hero = () => {
   return (
     <header className="flex flex-col-reverse text-primary-blue lg:flex-row md:justify-between">
+       <div className="bg-[url('/bg-tablet-pattern.svg')] -mt-90 md:-mt-60    md:ml-54 z-[-1] md:h-[856px] md:w-[1220px]  h-[850px] w-[830px] absolute bg-no-repeat bg-top-right"/> 
       <div className=" mt-12  md:mt-40 md:w-1/2">
         <div className=" font-extrabold whitespace-pre-line   text-4xl md:text-5xl">
           <h1 className="whitespace-pre-line text-center md:text-start ">
@@ -30,7 +31,10 @@ const Hero = () => {
           alt="hero image"
         />
       </div>
+
     </header>
+
+    
   );
 };
 

@@ -9,27 +9,29 @@ import Testimonial from "../components/Testimonial";
 
 const RootLayout = () => {
   return (
-    <section className="max-w-7xl mx-auto vietnamsans">
-      <div className="  px-10 ">
-        <div className="relative">
-          <div className="bg-[url('/bg-tablet-pattern.svg')] -mt-90 md:-mt-60    md:ml-54 z-[-1] md:h-[856px] md:w-[1220px]  h-[850px] w-[830px] absolute bg-no-repeat bg-top-right"></div>
-          <Navbar />
-          <Hero />
+    <>
+      <Navbar />
+      <section className="max-w-7xl  mx-auto vietnamsans">
+        <div className="  px-10 ">
+         
+            
+            
+           
+            <Hero  />
+          
+
+          <div className="relative">
+            <div className="bg-[url('/bg-tablet-pattern.svg')] ml-30 -mt-120 md:-ml-60  z-[-1] md:mt-120  md:h-[756px] md:w-[420px] h-[850px] w-[830px]   absolute bg-no-repeat bg-top-right" />
+            <MainContent />
+
+            <Testimonial />
+          </div>
         </div>
-
-        <div className="relative">
-          <div className="bg-[url('/bg-tablet-pattern.svg')] ml-30 -mt-120 md:-ml-60  z-[-1] md:mt-120  md:h-[756px] md:w-[420px] h-[850px] w-[830px]   absolute bg-no-repeat bg-top-right" />
-          <MainContent/>
-
-          <Testimonial/>
-        </div>
-      </div>
-
+      </section>
       <Branding></Branding>
       <Outlet></Outlet>
-
       <Footer></Footer>
-    </section>
+    </>
   );
 };
 
