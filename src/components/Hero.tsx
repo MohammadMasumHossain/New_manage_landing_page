@@ -6,7 +6,7 @@ const Hero = () => {
     <header className="relative  overflow-x-clip">
       {/* <div className="bg-[url('/bg-tablet-pattern.svg')] -mt-90 md:-mt-90 md:ml-54 z-[-1] border md:h-[53rem]  md:w-[109rem] h-[850px] w-[590px]  absolute bg-no-repeat bg-top-right " /> */}
 
-      <div className="z-[-1]   md:h-212  w-full md:w-fit h-172 absolute  md:-top-96 -top-80  md:-right-46 -right-68">
+      <div className="z-[-1]   md:h-212  w-full md:w-fit h-172 absolute  md:-top-96 -top-80  md:-right-46 -right-42">
         <img className="h-full w-auto" src="/bg-tablet-pattern.svg" alt="" />
       </div>
       {/* md:w-[109rem]

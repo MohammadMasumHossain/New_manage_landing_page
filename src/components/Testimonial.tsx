@@ -1,70 +1,37 @@
-import anishaimg from "../assets/avatar-anisha.png";
-import aliimg from "../assets/avatar-ali.png";
-import richardimg from "../assets/avatar-richard.png";
-import shanaiimg from "../assets/avatar-shanai.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Button from "./ui/Button";
 import { useState } from "react";
+import { data, type Data } from "../constants/testimonialdata";
 
 const Testimonial = () => {
-  const data = [
-    {
-      id: 1,
-      name: "Anisha Li",
-      testimonial:
-        "“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”",
-      image: anishaimg,
-    },
-    {
-      id: 2,
-      name: "Ali Bravo",
-      testimonial:
-        "“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”",
-      image: aliimg,
-    },
-    {
-      id: 3,
-      name: "Richard Watts",
-      testimonial:
-        "“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”",
-      image: richardimg,
-    },
-    {
-      id: 4,
-      name: "Shanai Gough",
-      testimonial:
-        "“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”",
-      image: shanaiimg,
-    },
-  ];
+  const [activeSlide, setActiveSlide] = useState(0);
 
-  const[activeSlide, setActiveSlide] =useState(0);
- 
-   
   var settings = {
     dots: true,
-    
+
     infinite: true,
-    speed: 500,
+
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     initialSlide: 0,
-    
-    beforeChange: (current, next) => {
-      
+    autoplay: true,
+    speed: 6000,
+    autoplaySpeed: 100,
+    cssEase: "linear",
+
+    beforeChange: (next: number) => {
       setActiveSlide(next);
     },
-   
 
-      customPaging: (i:number) => (
-      <div className= {`size-2  rounded-full mt-6 border border-red-500 ${i === activeSlide ? "bg-primary-orange":"bg-white"}`}
-        
-      >
-        
-      </div>
+    customPaging: (i: number) => (
+      <div
+        className={`size-2  rounded-full mt-6 border border-red-500 ${
+          i === activeSlide ? "bg-primary-orange" : "bg-white"
+        }`}
+      ></div>
     ),
 
     responsive: [
@@ -93,11 +60,9 @@ const Testimonial = () => {
         },
       },
     ],
-
-
   };
   return (
-    <section className="max-w-[1500px] w-[80%] mx-auto">
+    <section className=" w-[95%] mx-auto">
       <div className="mt-20 ">
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
           What They've Said
@@ -106,7 +71,7 @@ const Testimonial = () => {
       <div className=" m-auto">
         <div className="mt-10 slider-container mb-10">
           <Slider {...settings}>
-            {data.map((d) => (
+            {data.map((d: Data) => (
               <div className="pt-10 ">
                 <div className="bg-base-light-gray h-60    text-gray-500 roundex-xl">
                   <div className="h-16 rounded-t-xl  relative flex justify-center items-center">
