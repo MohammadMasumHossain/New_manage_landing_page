@@ -74,7 +74,7 @@ const Navbar = () => {
               />
             ) : (
               <img
-                className="lg:hidden w-8 fixed top-6 right-16 "
+                className="lg:hidden w-8 fixed top-10 right-16 "
                 onClick={showNav}
                 src={close}
                 alt="close"
@@ -86,8 +86,8 @@ const Navbar = () => {
 
       {/* mobile menu */}
       <nav
-        className={`lg:hidden absolute -top-20 right-0 h-full w-full  z-40 flex flex-col items-center justify-center gap-10 text-xl font-semibold transition-all duration-700 ${
-          nav ? "translate-x-0" : "translate-x-full hidden"
+        className={`lg:hidden  absolute -top-20 right-0 h-full w-full  z-40 flex flex-col items-center justify-center gap-10 text-xl font-semibold transition-transform duration-300 ${
+          nav ? "translate-y-0" : "-translate-y-full "
         }`}
       >
         <ul className="flex flex-col gap-4  px-20 py-20  bg-gray-50  text-gray-700">
