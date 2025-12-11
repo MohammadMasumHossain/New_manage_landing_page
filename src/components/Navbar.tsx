@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 import hamburger from "../assets/icon-hamburger.svg";
 import close from "../assets/icon-close.svg";
-import  Button from "./ui/Button";
+import Button from "./ui/Button";
 import { NavLink } from "react-router";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
     setNav(!nav);
   };
 
-  useEffect(() => {    
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true);
@@ -25,50 +25,63 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []); 
+  }, []);
+
+  const navmenu = `text-primary-blue hover:opacity-50 relative px-1 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary-orange after:transition-all after:duration-300 hover:after:w-full cursor pointer`;
   return (
     <>
-      <div className= {`${isScrolled? "bg-white shadow-navbar " : "bg-transparent"} sticky top-0 z-50`}  >
-        
+      <div
+        className={`${
+          isScrolled ? "bg-white shadow-navbar " : "bg-transparent"
+        } sticky top-0 z-50`}
+      >
         <div className="flex max-w-[1500px] w-[80%] mx-auto  justify-between gap-8 items-center mt-4 py-6  ">
-        <div>
-          <img className="  min-w-32  lg:w-40 h-auto"  src={logo} alt="logo" />
-        </div>
+          <div>
+            <img className="  min-w-32  lg:w-40 h-auto" src={logo} alt="logo" />
+          </div>
 
-        <ul className="hidden lg:flex gap-6 text-gray-700 font-semibold">
-          
-          <NavLink to="#" className="text-primary-blue hover:opacity-50">Pricing</NavLink>
-          <NavLink to="#" className="text-primary-blue hover:opacity-50">Product</NavLink>
-          <NavLink to="#" className="text-primary-blue hover:opacity-50">About us</NavLink>
-          <NavLink to="#" className="text-primary-blue hover:opacity-50">Careers</NavLink>
-          <NavLink to="#" className="text-primary-blue hover:opacity-50">Community</NavLink>
-          
-        </ul>
+          <ul className="hidden lg:flex gap-6 text-gray-700 font-semibold">
+            <NavLink to="#" className={navmenu}>
+              Pricing
+            </NavLink>
+            <NavLink to="#" className={navmenu}>
+              Product
+            </NavLink>
+            <NavLink to="#" className={navmenu}>
+              About us
+            </NavLink>
+            <NavLink to="#" className={navmenu}>
+              Careers
+            </NavLink>
+            <NavLink to="#" className={navmenu}>
+              Community
+            </NavLink>
+          </ul>
 
-        {/* Desktop Button */}
-        <div className="hidden text-white lg:block">
-          <Button bgcolor="bg-primary-orange"/>
-        </div>
+          {/* Desktop Button */}
+          <div className="hidden text-white lg:block">
+            <Button bgcolor="bg-primary-orange" />
+          </div>
 
-        {/* Mobile Hamburger */}
-        <div className="lg:hidden">
-          {!nav ? (
-            <img
-              className="lg:hidden w-8 "
-              onClick={showNav}
-              src={hamburger}
-              alt="menu"
-            />
-          ) : (
-            <img
-              className="lg:hidden w-8 fixed top-6 right-16 "
-              onClick={showNav}
-              src={close}
-              alt="close"
-            />
-          )}
+          {/* Mobile Hamburger */}
+          <div className="lg:hidden">
+            {!nav ? (
+              <img
+                className="lg:hidden w-8 "
+                onClick={showNav}
+                src={hamburger}
+                alt="menu"
+              />
+            ) : (
+              <img
+                className="lg:hidden w-8 fixed top-6 right-16 "
+                onClick={showNav}
+                src={close}
+                alt="close"
+              />
+            )}
+          </div>
         </div>
-      </div>
       </div>
 
       {/* mobile menu */}
@@ -78,11 +91,24 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col gap-4  px-20 py-20  bg-gray-50  text-gray-700">
-          <NavLink to="#" className="text-primary-blue hover:opacity-50">Pricing</NavLink>
-          <NavLink to="#" className="text-primary-blue hover:opacity-50">Product</NavLink>
-          <NavLink to="max-w-[1500px]#" className="text-primary-blue hover:opacity-50">About us</NavLink>
-          <NavLink to="#" className="text-primary-blue hover:opacity-50">Careers</NavLink>
-          <NavLink to ="#" className="text-primary-blue hover:opacity-50">Community</NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">
+            Pricing
+          </NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">
+            Product
+          </NavLink>
+          <NavLink
+            to="max-w-[1500px]#"
+            className="text-primary-blue hover:opacity-50"
+          >
+            About us
+          </NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">
+            Careers
+          </NavLink>
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">
+            Community
+          </NavLink>
         </ul>
       </nav>
     </>
