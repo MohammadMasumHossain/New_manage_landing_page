@@ -13,17 +13,17 @@ const Hero = () => {
     once: true,
   });
   return (
-    <header className="relative  overflow-x-clip">
+    <header className="relative   overflow-x-clip">
       {/* <div className="bg-[url('/bg-tablet-pattern.svg')] -mt-90 md:-mt-90 md:ml-54 z-[-1] border md:h-[53rem]  md:w-[109rem] h-[850px] w-[590px]  absolute bg-no-repeat bg-top-right " /> */}
 
-      <div className="z-[-1]   md:h-212  w-full md:w-fit h-172 absolute  md:-top-96 -top-80  md:-right-46 -right-42">
+      <div className="-z-10 md:h-212 overflow-x-clip w-full md:w-fit h-172 absolute  md:-top-96 -top-80  md:-right-46 -right-42">
         <img className="h-full w-auto" src="/bg-tablet-pattern.svg" alt="" />
       </div>
       {/* md:w-[109rem]
        w-[590px] 
        md:ml-54*/}
 
-      <div className="max-w-[1500px] w-[80%] mx-auto flex flex-col-reverse text-primary-blue lg:flex-row  lg:justify-between">
+      <div className="max-w-[1500px] w-[80%] mx-auto  flex flex-col-reverse text-primary-blue lg:flex-row  lg:justify-between">
         <div className=" mt-12 md:mt-20 lg:mt-40 lg:w-1/2">
           <MotionWrapper animateNow={isInView}>
             <div className=" font-extrabold whitespace-pre-line   text-4xl md:text-5xl">

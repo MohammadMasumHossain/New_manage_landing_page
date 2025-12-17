@@ -54,7 +54,7 @@ const MotionWrapper = ({
       animate={animateNow ? "show" : "hidden"}
     >
       {wrappedChildren}
-    </motion.div>
+    </motion.div> 
   );
 };
 

@@ -10,13 +10,13 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const showNav = () => {
-    setNav(!nav);
+  const toggleNav = () => {
+    setNav((state) => !state);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -32,10 +32,10 @@ const Navbar = () => {
     <>
       <div
         className={`${
-          isScrolled ? "bg-white shadow-navbar " : "bg-transparent"
+          isScrolled ? "bg-white shadow-navbar " : "bg-transparent  "
         } sticky top-0 z-50`}
       >
-        <div className="flex max-w-[1500px] w-[80%] mx-auto  justify-between gap-8 items-center mt-4 py-6  ">
+        <div className="flex max-w-[1500px] vietnamsans w-[80%]  mx-auto  justify-between gap-8 items-center mt-4 py-6  ">
           <div>
             <img className="  min-w-32  lg:w-40 h-auto" src={logo} alt="logo" />
           </div>
@@ -68,14 +68,18 @@ const Navbar = () => {
             {!nav ? (
               <img
                 className="lg:hidden w-8 "
-                onClick={showNav}
+                onClick={toggleNav}
                 src={hamburger}
                 alt="menu"
               />
             ) : (
               <img
-                className="lg:hidden w-8 fixed top-10 right-16 "
-                onClick={showNav}
+                className={`${
+                  isScrolled
+                    ? "lg:hidden w-8 fixed top-6 right-16 md:top-6 md:right-24 "
+                    : "lg:hidden w-8 fixed top-10 right-16 md:top-10 md:right-24  "
+                } `}
+                onClick={toggleNav}
                 src={close}
                 alt="close"
               />
@@ -86,21 +90,19 @@ const Navbar = () => {
 
       {/* mobile menu */}
       <nav
-        className={`lg:hidden  absolute -top-20 right-0 h-full w-full  z-40 flex flex-col items-center justify-center gap-10 text-xl font-semibold transition-transform duration-300 ${
-          nav ? "translate-y-0" : "-translate-y-full "
+        onClick={toggleNav}
+        className={`lg:hidden bg-linear-to-t  from-black/20 to-transparent min-h-screen fixed -top-20 right-0 size-full  z-40 flex flex-col items-center justify-center gap-10 text-xl font-semibold transition-transform duration-300 ${
+          nav ? "translate-y-0 top-0" : "-translate-y-full"
         }`}
       >
-        <ul className="flex flex-col gap-4  px-20 py-20  bg-gray-50  text-gray-700">
+        <ul className="flex flex-col gap-4   px-10 py-20  w-[300px]  bg-white  items-center justify-center  text-gray-700">
           <NavLink to="#" className="text-primary-blue hover:opacity-50">
             Pricing
           </NavLink>
           <NavLink to="#" className="text-primary-blue hover:opacity-50">
             Product
           </NavLink>
-          <NavLink
-            to="max-w-[1500px]#"
-            className="text-primary-blue hover:opacity-50"
-          >
+          <NavLink to="#" className="text-primary-blue hover:opacity-50">
             About us
           </NavLink>
           <NavLink to="#" className="text-primary-blue hover:opacity-50">

@@ -12,23 +12,29 @@ const Testimonial = () => {
   var settings = {
     dots: true,
 
-    infinite: true,
-
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
-    speed: 6000,
-    autoplaySpeed: 100,
-    cssEase: "linear",
 
-    beforeChange: (next: number) => {
+    beforeChange: (_current: number, next: number) => {
       setActiveSlide(next);
+      infinite: true;
+      speed: 6000;
+      autoplaySpeed: 1000;
+      cssEase: "linear";
     },
 
+    afterChange: (current: number) => {
+      setActiveSlide(current);
+      infinite: true;
+      speed: 6000;
+      autoplaySpeed: 1000;
+      cssEase: "linear";
+    },
     customPaging: (i: number) => (
       <div
-        className={`size-2  rounded-full mt-6 border border-red-500 ${
+        className={`size-2 rounded-full mt-6 border border-primary-orange duration-300 ${
           i === activeSlide ? "bg-primary-orange" : "bg-white"
         }`}
       ></div>
@@ -96,7 +102,7 @@ const Testimonial = () => {
         </div>
       </div>
       <div className="text-center text-white mt-12 mb-12">
-        <Button bgcolor="bg-primary-orange"></Button>
+        <Button bgcolor="bg-primary-orange" />
       </div>
     </section>
   );

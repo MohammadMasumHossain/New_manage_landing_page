@@ -1,23 +1,39 @@
 import MotionWrapper from "./ui/MotionWrapper";
 import MotionWrapperright from "./ui/MotionWrapperright";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const MainContent = () => {
   const sectionRef = useRef(null);
 
+  const [amount, setamount] = useState(0);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setamount(0.9);
+      } else {
+        setamount(0.7);
+      }
+    };
+
+    handleResize(); // Initial call
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const isInView = useInView(sectionRef, {
-    amount: 0.9,
+    amount,
     once: true,
   });
+
   return (
-    <section ref={sectionRef} className="relative overflow-x-clip">
-      <div className="z-[-1]   md:h-212  w-full md:w-fit md:-bottom-110  md:-left-80 bottom-130 left-60  h-172 absolute ">
+    <section ref={sectionRef} className="relative  overflow-x-clip  ">
+      <div className="z-[-1]  md:h-212 w-full md:w-fit md:-bottom-110  md:-left-80 bottom-130 left-60 h-172 absolute ">
         {/* md:-top-96 -top-80  md:-right-46 -right-68 md:bottom-25  md:-left-110 */}
         <img className="h-auto w-full" src="/bg-tablet-pattern.svg" alt="" />
       </div>
 
-      <div className="flex flex-col  md:flex-row max-w-[1500px] w-[95%] md:w-[90%]  lg:w-[80%] mx-auto text-primary-blue lg:justify-between">
+      <div className="flex flex-col  md:flex-row max-w-[1500px] w-[95%] md:w-[90%] lg:w-[80%] mx-auto text-primary-blue lg:justify-between">
         <div className="mt-20 md:mt-40 md:w-6/12">
           <MotionWrapper
             animateNow={isInView}
@@ -42,14 +58,21 @@ const MainContent = () => {
 
         <div className="mt-10 md:w-6/12  md:ml-30 md:mt-40">
           <div className="mt-10">
-            <div className="md:hidden flex items-center gap-4 bg-base-orange pr-px-4  rounded-l-full w-full">
-              <div className="bg-primary-orange text-white font-semibold w-14 h-10 flex items-center justify-center rounded-full">
-                01
+            <MotionWrapperright
+              animateNow={isInView}
+              className=""
+              stagger={0.5}
+              duration={1}
+            >
+              <div className="md:hidden flex items-center gap-4 bg-base-orange pr-px-4  rounded-l-full w-full">
+                <div className="bg-primary-orange text-white font-semibold w-14 h-10 flex items-center justify-center rounded-full">
+                  01
+                </div>
+                <h3 className="font-semibold text-md">
+                  Track company-wide progress
+                </h3>
               </div>
-              <h3 className="font-semibold text-md">
-                Track company-wide progress
-              </h3>
-            </div>
+            </MotionWrapperright>
 
             <MotionWrapperright
               animateNow={isInView}
@@ -76,14 +99,21 @@ const MainContent = () => {
           </div>
 
           <div className="mt-10">
-            <div className="md:hidden flex items-center gap-4 bg-base-orange pr-px-4  rounded-l-full w-full">
-              <div className="bg-primary-orange text-white font-semibold w-14 h-10 flex items-center justify-center rounded-full">
-                02
+            <MotionWrapperright
+              animateNow={isInView}
+              className=""
+              stagger={0.5}
+              duration={2}
+            >
+              <div className="md:hidden flex items-center gap-4 bg-base-orange pr-px-4  rounded-l-full w-full">
+                <div className="bg-primary-orange text-white font-semibold w-14 h-10 flex items-center justify-center rounded-full">
+                  02
+                </div>
+                <h3 className="font-semibold text-md">
+                  Advanced built-in reports
+                </h3>
               </div>
-              <h3 className="font-semibold text-md">
-                Advanced built-in reports
-              </h3>
-            </div>
+            </MotionWrapperright>
             <MotionWrapperright
               animateNow={isInView}
               className=""
@@ -108,14 +138,21 @@ const MainContent = () => {
           </div>
 
           <div className="mt-10">
-            <div className="md:hidden flex items-center gap-4 bg-base-orange pr-px-4  rounded-l-full w-full">
-              <div className="bg-primary-orange text-white font-semibold w-14 h-10 flex items-center justify-center rounded-full">
-                03
+            <MotionWrapperright
+              animateNow={isInView}
+              className=""
+              stagger={0.5}
+              duration={3}
+            >
+              <div className="md:hidden flex items-center gap-4 bg-base-orange pr-px-4  rounded-l-full w-full">
+                <div className="bg-primary-orange text-white font-semibold w-14 h-10 flex items-center justify-center rounded-full">
+                  03
+                </div>
+                <h3 className="font-semibold text-md">
+                  Everything you need in one place
+                </h3>
               </div>
-              <h3 className="font-semibold text-md">
-                Everything you need in one place
-              </h3>
-            </div>
+            </MotionWrapperright>
             <MotionWrapperright
               animateNow={isInView}
               className=""

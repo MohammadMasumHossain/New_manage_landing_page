@@ -10,15 +10,14 @@ import Instragram from "./shared/icons/Instragram";
 const Footer = () => {
   return (
     <>
-      <footer className=" ">
-        <div className ="bg-black ">
+      <footer>
+        <div className="bg-black vietnamsans ">
           <div className="max-w-[1500px] w-[80%] mx-auto pb-10 flex flex-col-reverse md:flex-row items-center md:justify-between lg:justify-between gap-10  ">
             {/* first div */}
             <div className="flex flex-col-reverse  md:items-start items-center md:flex-col ">
               <div className="pt-10  text-gray-700">
                 <Logowhite />
               </div>
-
               <div className="flex mt-8 lg:gap-4 space-x-4 ">
                 <NavLink to="#">
                   <Facebook />
@@ -38,6 +37,7 @@ const Footer = () => {
                   <Instragram />
                 </NavLink>
               </div>
+              vietnamsans
             </div>
 
             {/* second div */}
